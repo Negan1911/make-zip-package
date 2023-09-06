@@ -65,7 +65,7 @@ function execShellCommand(cmd, cwd) {
 
 async function copyToDir() {
   // Adquire temp dir
-  const tmpdir = path.join(os.tmpdir(), fs.mkdtempSync('builder-'))
+  const tmpdir = fs.mkdtempSync(path.join(os.tmpdir(), 'builder-'))
 
   // Adquire base of monorepo
   const base = getBase(process.cwd())
