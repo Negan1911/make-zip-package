@@ -52,7 +52,6 @@ function getPath(entry, out, file) {
     return path.join(out, file)
   }
 
-  console.log(`${path.join(entry, file)} is file`)
   return path.join(out, path.dirname(file))
 }
 
