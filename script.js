@@ -98,7 +98,7 @@ async function copyToDir() {
   }
 
   // Zip folder
-  const zipArgs = ['-r deploy.zip', values.verbose ? '-qq' : null].filter(Boolean).join(' ')
+  const zipArgs = ['-r deploy.zip', values.verbose ? null : '-qq'].filter(Boolean).join(' ')
 
   log('Zip Output: ', await execShellCommand(`zip ${zipArgs} *`, tmpdir))
 
