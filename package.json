@@ -1,6 +1,6 @@
 {
   "name": "make-zip-package",
-  "version": "0.0.4",
+  "version": "0.1.0",
   "main": "index.js",
   "repository": "git@github.com:Negan1911/make-zip-package.git",
   "author": "Nahuel Veron <nahuelav96@gmail.com>",

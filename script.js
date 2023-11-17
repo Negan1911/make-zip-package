@@ -35,7 +35,11 @@ function getBase(base) {
   if (base === '/')
     throw new Error('Base cannot be found.')
 
-  if (fs.existsSync(path.join(base, 'yarn.lock'))) {
+  if (
+    fs.existsSync(path.join(base, 'yarn.lock')) ||
+    fs.existsSync(path.join(base, 'package-lock.json')) ||
+    fs.existsSync(path.join(base, 'pnpm-lock.yaml'))
+  ) {
     return base
   }
 
